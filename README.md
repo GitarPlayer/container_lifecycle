@@ -2,10 +2,9 @@
 ```bash
 podman pull httpd
 podman images
-podman images
 podman create --name created httpd
 echo $PORT
-podman run -d --name -p $PORT:80 httpd-container httpd
+podman run -d --name -p $PORT:80 --restart=always httpd-container httpd
 podman ps --format 'Name: {{.Names}} Status: {{.Status}}' -a
 curl localhost:$PORT
 echo "INDEX"
