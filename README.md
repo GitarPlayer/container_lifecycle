@@ -2,6 +2,7 @@
 ```bash
 podman pull httpd:2.4
 podman images
+podman ps -a
 podman create --name created httpd:2.4
 echo $PORT
 podman run -d --name httpd-container -p $PORT:80 --restart=always  httpd:2.4
