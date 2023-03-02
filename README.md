@@ -4,7 +4,7 @@ podman pull httpd
 podman images
 podman create --name created httpd
 echo $PORT
-podman run -d --name -p $PORT:80 --restart=always httpd-container httpd
+podman run -d --name httpd-container -p $PORT:80 --restart=always  httpd
 podman ps --format 'Name: {{.Names}} Status: {{.Status}}' -a
 curl localhost:$PORT
 echo "INDEX"
