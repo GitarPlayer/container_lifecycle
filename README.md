@@ -15,4 +15,5 @@ podman rm httpd-container
 podman stop httpd-container
 podman rm httpd-container
 podman rm created
+podman rmi docker.io/library/httpd:2.4
 ```
