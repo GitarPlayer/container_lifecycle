@@ -1,10 +1,10 @@
 # container_lifecycle
 ```bash
-podman pull httpd
+podman pull httpd:2.4
 podman images
-podman create --name created httpd
+podman create --name created httpd:2.4
 echo $PORT
-podman run -d --name httpd-container -p $PORT:80 --restart=always  httpd
+podman run -d --name httpd-container -p $PORT:80 --restart=always  httpd:2.4
 podman ps --format 'Name: {{.Names}} Status: {{.Status}}' -a
 curl localhost:$PORT
 echo $INDEX
