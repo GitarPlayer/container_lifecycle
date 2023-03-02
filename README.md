@@ -2,8 +2,6 @@
 ```bash
 podman pull httpd
 podman images
-podman save -o ID httpd.tar
-podman load -i httpd.tar
 podman images
 podman create --name created httpd
 podman run -d --name -p $PORT:80 httpd-container httpd
